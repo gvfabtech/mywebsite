@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function(){
+            $("#footer").load("footer.html");
+        });
+    </script>
+    <link rel="icon" href="images/Gvlogotop.jpeg" > 
+    <title> GV Fabtech </title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+</head>
+<body>
+    <section class="header-container">
+        <div class="header">    
+            <a href="index.html" class="logo"><img src="images/GV_Logo_WhiteC.png" alt="Logo"></a>
+            <div class="navlinks" id="navLinks">
+                <i class="fas fa-times close-menu" onclick="hideMenu()"></i>
+                <ul id="nav-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="services.html">SERVICES</a></li>
+                    <li><a href="project.html">PROJECTS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li>
+                        <a href="Downloads/brochure.jpg" download="Brochure">
+                            <button class="brochure">Download Brochure</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <i class="fas fa-bars hamburger" onclick="showMenu()"></i>
+        </div>
+    </section>
+
+
+    <section class="banner home-banner">
+        <div class="banner-overlay"></div>
+        <div class="text-box">
+            <h1>Welcome to G V Fabtech</h1>
+            <h3>Innovative Architectural Aluminium Facades</h3>
+            <a href="contact.html" class="hero-btn"><b>Contact Us</b></a>
+        </div>
+    </section>
+    
+
+    <!-------ABOUT US---------->
+    <section class = "about">  
+          
+        <div class="row">
+            <div class="container1-img">
+                <img src="images/au2.jpeg">
+                <p><em>(Caption: A stunning facade project by G.V. FABTECH showcasing innovation and design excellence.)</em></p>
+            </div>
+
+            <div class = "container2-aboutus">   
+                <h2>About G V FABTECH</h2>
+                <h3>Architectural Aluminium Facade & Interiors </h1>
+                <p>
+                    We are specialists in design and  installation of custom high
+                    performance building facades consisting of curtain walls, 
+                    Structural Glazing, glass, aluminium panels, and related 
+                    architectural elements like Shower Cubicles, Doors, Windows,
+                    Canopies, Skylights and Aluminium Composite Panel Cladding.  A combined industry experience of over a decade has helped us become a leading brand for facade and cladding works in Bengaluru. As the prominent facade in commercial construction, the work of this executive team is on display throughout Bangalore
+                </p>
+                <a href="about.html" class="aboutknow"><b>Know more</b></a>
+            </div>
+     </div>
+    </section>
+    
+   <section class="experience">
+  <div class="container-experience">
+    <div class="experience-row">
+      <div class="exp-1">
+        <h1>18+</h1>
+        <h2>YEARS</h2>
+        <h3>of experience</h3>
+      </div>
+      <div class="exp-2">
+        <p>*India's First Architectural Aluminium Facade Company to provide<br>
+           1 Year of FREE SERVICE.</p>
+        <p>G V FABTECH</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!---Our Projects-->
+
+<section id="project">
+    <div class="container-heading">
+        <h1 class="text-center section-heading">Recent Projects</h1>
+    </div>
+
+    <main>
+        <section class="project">
+            <div class="project-card">
+                <img src="images/Our Projects/1.jpeg" alt="Picture-1">
+            </div>
+            <div class="project-card">
+                <img src="images/Our Projects/2.jpg" alt="Picture-2">
+            </div>
+            <div class="project-card">
+                <img src="images/Our Projects/3.jpg" alt="Picture-3">
+            </div>
+            <div class="project-card">
+                <img src="images/Our Projects/4.jpg" alt="Picture-4">
+            </div>
+            <div class="project-card">
+                <img src="images/Our Projects/5.jpg" alt="Picture-5">
+            </div>
+            <div class="project-card">
+                <img src="images/Our Projects/6.jpeg" alt="Picture-6">
+            </div>
+            <div class="see-more">
+                <a href="project.html" class="aboutknow"><b>See More...</b></a> <!-- Using aboutknow class -->
+            </div>
+        </section>
+    </main>
+    
+    
+
+<!-- channel partners marquee-->
+
+<section class="channel-partners">
+    <div class="channel-header">
+        <h1>Our Channel partners</h1>
+    </div>
+<div class="marquee">
+    <div class="marquee-content">
+        <marquee>
+        <!-- Add images of your channel partners -->
+        <img src="images/Channel partner/Viva.gif" alt="Partner 1">
+        <img src="images/Channel partner/Jindal.png" alt="Partner 2">
+        <img src="images/Channel partner/Eurobond.png" alt="Partner 3">
+        <img src="images/Channel partner/Saint Gobain.png" alt="Partner 4">
+        <img src="images/Channel partner/4Mann.png" alt="Partner 5">
+        <img src="images/Channel partner/Ozone.png" alt="Partner 1">
+        <img src="images/Channel partner/Aludecor.png" alt="Partner 2">
+        <img src="images/Channel partner/Ais.png" alt="Partner 3">
+        <img src="images/Channel partner/Sinewy.png" alt="Partner 4">
+        <img src="images/Channel partner/dowsil.png" alt="Partner 5">
+        <!-- Duplicate images for seamless marquee effect -->
+                <img src="images/Channel partner/Viva.gif" alt="Partner 1">
+        <img src="images/Channel partner/Jindal.png" alt="Partner 2">
+        <img src="images/Channel partner/Eurobond.png" alt="Partner 3">
+        <img src="images/Channel partner/Saint Gobain.png" alt="Partner 4">
+        <img src="images/Channel partner/4Mann.png" alt="Partner 5">
+        <img src="images/Channel partner/Ozone.png" alt="Partner 1">
+        <img src="images/Channel partner/Aludecor.png" alt="Partner 2">
+        <img src="images/Channel partner/Ais.png" alt="Partner 3">
+        <img src="images/Channel partner/Sinewy.png" alt="Partner 4">
+        <img src="images/Channel partner/dowsil.png" alt="Partner 5">
+    </marquee>
+    </div>
+</div>
+</section>
+
+<!----Testimonals-->
+   
+<!-- Footer-->
+<div id="footer"></div>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    
+  
+<script>
+    function showMenu() {
+        document.getElementById('navLinks').classList.add('active');
+    }
+
+    function hideMenu() {
+        document.getElementById('navLinks').classList.remove('active');
+    }
+</script>
+
+
+<script>
+    var TrendingSlider = new Swiper('.trending-slider', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        loop: true,
+        slidesPerView: 3,
+        coverflowEffect:{
+            rotate: 50,
+            stretch: 0,
+            depth: 150,
+            modifier: 1.2,
+            
+        },
+        pagination:{
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        }
+    });
+
+</script>
+   
+
+<script type="text/javascript">
+    window.addEventListener("scroll", function() {
+        var header = document.querySelector(".header");
+        const logo = document.querySelector(".logo img");
+        const menuIcon =document.querySelector(".hamburger");
+        header.classList.toggle("sticky", window.scrollY > 0);
+        if (window.scrollY > 0) {
+            logo.src = "/images/GV_Logo_BlackC.png";
+            menuIcon.style.color="#000";
+        } else {
+            logo.src = "/images/GV_Logo_WhiteC.png";
+            menuIcon.style.color="#fff";
+        }
+    });
+
+</script>
+
+    
+</body>
+</html>

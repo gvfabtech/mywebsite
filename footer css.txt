@@ -1,0 +1,77 @@
+/* General Footer Styling */
+footer {
+    background-color: #ffffff; /* Dark blue background */
+    color: #429cb5; /* White text color */
+    font-family: Arial, sans-serif;
+    padding: 20px 0;
+}
+
+.foot-text{
+    color:#000;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* Footer Logo Section */
+.footer-logo img {
+    max-width: 500px; /* Adjust logo size */
+    margin-bottom: 10px;
+}
+
+/* Footer Information Links */
+.footer-info h3,
+.footer-address h3 {
+    color: #2e6d7f; /* Light blue heading */
+    margin-bottom: 10px;
+}
+
+.footer-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-info ul li {
+    margin-bottom: 8px;
+}
+
+.footer-info ul li a {
+    text-decoration: none;
+    color: #429cb5;
+    transition: color 0.3s;
+}
+
+.footer-info ul li a:hover {
+    color: #226171; /* Light blue on hover */
+}
+
+/* Footer Address Section */
+.footer-address p {
+    margin: 5px 0;
+}
+
+.footer-address a {
+    color: #2e6d7f;
+    text-decoration: none;
+}
+
+.footer-address a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    text-align: center;
+    background-color: #103955; /* Darker footer bottom */
+    padding: 15px 0;
+    margin-top: 0px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 17px;
+    color: #e2e0e1;
+}

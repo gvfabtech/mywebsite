@@ -1,0 +1,25 @@
+<section class="header-container">
+        <div class="header">    
+            <a href="index.html" class="logo"><img src="images/GV_Logo_WhiteC.png" alt="Logo"></a>
+            
+            <!-- Hamburger Icon -->
+             <div class="navlinks" id="navLinks">
+            
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+
+            <!-- Navigation Links -->
+            <ul id="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="project.html">PROJECTS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <a href="downloads/brochure.pdf" download="Brochure">
+                    <button class="brochure">Download Brochure</button>
+                </a>
+            </ul>
+
+        </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </div>
+    </section>

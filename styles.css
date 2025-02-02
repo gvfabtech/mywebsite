@@ -1,0 +1,1802 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    z-index: 10000;
+}
+
+.header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header ul li{
+    position: relative;
+    list-style: none;
+}
+
+
+.header ul li a{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight:bold;
+    transition: 0.6s;
+    font-size: 18px;
+
+}
+
+.header.sticky{
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    background-color: #fff;
+   
+
+}
+.header img{
+    width: 225px;
+    height: 55px ;
+}
+
+
+.header.sticky ul li a{
+    color:#000;
+    z-index: 1000;
+}
+
+
+
+.brochure{
+    display: inline-block;
+    font-weight: bold;
+    color:#ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 8px;
+    background:#2e6d7f;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .header ul {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .header ul li a {
+        margin: 10px 0;
+        font-size: 16px;
+    }
+
+    .header img {
+        width: 180px;
+        height: 45px;
+    }
+
+    .brochure {
+        font-size: 14px;
+        padding: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .header ul {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .header ul li a {
+        margin: 8px 0;
+        font-size: 14px;
+    }
+
+    .header img {
+        width: 150px;
+        height: 40px;
+    }
+
+    .brochure {
+        font-size: 12px;
+        padding: 5px;
+    }
+}
+
+/* Banner Section Styles */
+.home-banner{
+    position: relative;
+    height: 100vh;
+    background: url('images/banner-aboutus.jpg') no-repeat center/cover; /* Replace with your image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    color: #fff; /* Default text color */
+}
+
+/* Background Overlay */
+.home-banner .banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(141, 230, 218, 0.3); /* Dark overlay for better readability */
+    z-index: 1;
+}
+
+/* Text Box Styles */
+.home-banner .text-box {
+    position: relative;
+    z-index: 2; /* Above the overlay */
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.home-banner .text-box h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #429cb5, #00ffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.home-banner .text-box h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    color: #e3f7fc;
+}
+
+/* Call-to-Action Button */
+.home-banner .hero-btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(to right, #429cb5, #00ffff);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.home-banner .hero-btn:hover {
+    background: linear-gradient(to right, #00ffff, #429cb5);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .banner {
+        height: 80vh;
+    }
+
+    .text-box h1 {
+        font-size: 2.5rem;
+    }
+
+    .text-box h3 {
+        font-size: 1.4rem;
+    }
+
+    .hero-btn {
+        font-size: 1rem;
+        padding: 0.8rem 2rem;
+    }
+}
+
+
+/*------ page-1 index.html About ------*/
+/* About Section */
+/* About Us Section Styles */
+.about {
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, #e3f7fc, #b3e6f5); /* Soft gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 4px solid var(--primary-color); /* Adding a colored border for emphasis */
+}
+
+.about .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1500px;
+    margin: 0 auto;
+    align-items: center;
+    background-color: #fff; /* Card background */
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+}
+
+.container1-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Add depth to the image */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container1-img img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* More prominent shadow */
+}
+
+.container2-aboutus {
+    text-align: left;
+    color: var(--primary-color);
+}
+
+.container2-aboutus h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Gradient text effect */
+}
+
+.container2-aboutus h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.container2-aboutus p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+    background: linear-gradient(90deg, #429cb5 10%, #00ffff 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Subtle gradient effect for the paragraph */
+}
+
+.aboutknow {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border: 2px solid var(--secondary-color);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--footer-bg-color);
+    background: var(--cta-bg-gradient);
+    transition: all 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.aboutknow:hover {
+    background: var(--cta-hover-gradient);
+    border-color: var(--primary-color);
+    color: var(--footer-bg-color);
+    transform: translateY(-3px) scale(1.05); /* Adds depth on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about .row {
+        grid-template-columns: 1fr;
+    }
+
+    .container2-aboutus h2 {
+        font-size: 2rem;
+    }
+
+    .container2-aboutus h3 {
+        font-size: 1.4rem;
+    }
+
+    .container2-aboutus p {
+        font-size: 1rem;
+    }
+}
+
+/* Experience Section */
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Experience Section */
+.experience {
+    background: linear-gradient(135deg, #429cb5, #00ffff);
+    padding: 0rem 0rem; /* Adjust padding to reduce space */
+    border-radius: 0px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    min-height: 10px; /* Ensure the section doesn't shrink too much */
+    margin-bottom: 0rem; /* Reduced margin between sections */
+}
+
+.experience::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://source.unsplash.com/1600x900/?architecture') no-repeat center center;
+    background-size: cover;
+    filter: blur(15px);
+    z-index: -1;
+    opacity: 0.4;
+}
+
+.container-experience {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.experience-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem; /* Reduced gap */
+    flex-wrap: wrap;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Main Experience Text (exp-1) */
+.exp-1 {
+    flex: 1;
+    padding: 1rem;
+}
+
+.exp-1 h1 {
+    font-size: 4rem; /* Reduced font size */
+    font-weight: 800;
+    color: #ffff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 0.5rem;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 1.2s ease-out;
+}
+
+.exp-1 h2 {
+    font-size: 2.5rem; /* Reduced font size */
+    font-weight: 600;
+    color: #ffff;
+    margin: 0.5rem 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: fadeIn 1.4s ease-out;
+}
+
+.exp-1 h3 {
+    font-size: 1.5rem; /* Reduced font size */
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: capitalize;
+    margin-top: 1rem;
+    animation: fadeIn 1.6s ease-out;
+}
+
+/* Supporting Text (exp-2) */
+.exp-2 {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.exp-2 p {
+    font-size: 1.2rem; /* Reduced font size */
+    color: #ffff;
+    line-height: 1.6; /* Reduced line height */
+    margin-bottom: 1rem; /* Reduced margin */
+    opacity: 0.9;
+    max-width: 800px;
+    text-align: center;
+    animation: fadeIn 1.8s ease-out;
+}
+
+.exp-2 p:hover {
+    opacity: 1;
+    color: #ffff;
+}
+
+.exp-2 p:last-child {
+    font-weight: 700;
+    font-size: 2rem; /* Reduced font size */
+    color: #ffff;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 0;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .experience-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .exp-1 h1 {
+        font-size: 3.5rem; /* Reduced font size */
+    }
+
+    .exp-1 h2 {
+        font-size: 2.2rem; /* Reduced font size */
+    }
+
+    .exp-1 h3 {
+        font-size: 1.4rem; /* Reduced font size */
+    }
+
+    .exp-2 p {
+        font-size: 1rem; /* Reduced font size */
+    }
+}
+    
+
+/*---services----*/
+
+
+/*- Projects Slider-*/
+
+/* Heading Container */
+.container-heading {
+    background-color: #429cb5; /* Soft blue background for the full-width band */
+    padding: 0rem 0; /* Vertical padding to give space above and below the text */
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0rem; /* Space below the section */
+}
+
+/* Section Heading */
+.section-heading {
+    font-size: 3rem; /* Font size for the heading */
+    font-weight: 700;
+    color: white; /* White text color */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 0; /* Remove default margin */
+    padding: 0;
+    position: relative;
+}
+
+/* Optional: Adding a hover underline effect */
+.section-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 10px; /* Position the underline below the text */
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #00ffff; /* Cyan underline */
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.section-heading:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* General Footer Styling */
+
+
+
+.img-about img{
+    width:100%;
+    
+}
+
+.project-images{
+    padding-top: 80px;
+    width: 100%;
+    height: fit-content;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*
+.swiper{
+    width: 80%;
+    height: fit-content;
+}
+.swiper-slide img{
+    width: 100%;
+   
+}
+
+.swiper .swiper-button-prev, .swiper .swiper-button-next{
+    color: #fff;
+}
+
+.swiper .swiper-pagination-bullet-active{
+    background:#fff;
+}
+
+
+.img-about img{
+    width:100%;
+    
+}
+
+.project-images{
+    padding-top: 80px;
+    width: 100%;
+    height: fit-content;
+    background:#ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper{
+    width: 80%;
+    height: fit-content;
+}
+.swiper-slide img{
+    width: 100%;
+   
+}
+
+.swiper .swiper-button-prev, .swiper .swiper-button-next{
+    color: #fff;
+}
+
+.swiper .swiper-pagination-bullet-active{
+    background:#fff;
+}
+*/
+
+
+/*contact-us-page*/
+
+/* Specific Banner Styling for "Contact" */
+.contact-banner {
+    position: relative;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+/* Background Image for Contact Banner */
+.contact-banner {
+    background-image: url('images/banner-contact.jpg'); /* Replace with your image */
+}
+
+/* Text Box Styling */
+.contact-banner .text-box {
+    background: rgba(141, 230, 218, 0.3); /* Semi-transparent background */
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.contact-banner .text-box h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #00ffff; /* Highlighted accent color */
+    margin: 0;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .contact-banner {
+        height: 40vh; /* Adjust height for mobile screens */
+    }
+
+    .contact-banner .text-box {
+        padding: 1.5rem 2rem; /* Adjust padding for smaller screens */
+    }
+
+    .contact-banner .text-box h1 {
+        font-size: 2rem; /* Smaller font size for mobile */
+    }
+}
+
+
+.contact-us-header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-us-header ul li{
+    position: relative;
+    list-style: none;
+}
+
+
+.contact-us-header ul li a{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight:bold;
+    transition: 0.6s;
+    font-size: 18px;
+
+}
+
+.contact-us-header.sticky{
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    background-color: #fff;
+   
+
+}
+
+.contact-us-header img{
+    width: 225px;
+    height: 55px ;
+}
+
+.contact-us-header.sticky ul li a{
+    color:#000;
+    z-index: 1000;
+}
+
+
+.brochure{
+    display: inline-block;
+    font-weight: bold;
+    color:#ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 8px;
+    background:#2e6d7f;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+
+
+.contact-form-section {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for the form */
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto; /* Center the form */
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #007BFF; /* Add focus color */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+textarea {
+    resize: none; /* Prevent resizing of the textarea */
+}
+
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 15px;
+    }
+
+    .form-container h2 {
+        font-size: 20px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 12px;
+    }
+
+    .btn-submit {
+        font-size: 14px;
+    }
+}
+
+
+
+
+/* About us page */
+
+/* General Banner Styling (This will not affect other banners) */
+.aboutus-banner {
+    position: relative;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+/* Background Image Specific to About Us Banner */
+.aboutus-banner {
+    background-image: url('images/banner-aboutus.jpg'); /* Replace with your image */
+}
+
+/* Text Box Styling Specific to About Us Banner */
+.aboutus-banner .text-box {
+    background: rgba(141, 230, 218, 0.3); /* Semi-transparent background */
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.aboutus-banner .text-box h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #00ffff; /* Highlighted accent color */
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .aboutus-banner {
+        height: 40vh; /* Adjust the height for mobile */
+    }
+
+    .aboutus-banner .text-box {
+        padding: 1.5rem 2rem; /* Adjust padding on smaller screens */
+    }
+
+    .aboutus-banner .text-box h1 {
+        font-size: 2rem; /* Smaller font size on mobile */
+    }
+}
+
+
+.aboutus-header{
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    z-index: 10000;
+}
+
+element.style {
+    background-position: center bottom;
+    background-image: url(https://lh3.googleusercontent.com/xc_b7pNnPGlJ0qnj6uD0ivSaZ-qlqPphamFlDQ7_EbetBgAiS153ZsIrUK_gQSzIkayp17sAijmEOUnRBJWFTFU=w16383);
+    background-size: cover;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+.aboutus-header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutus-header ul li{
+    position: relative;
+    list-style: none;
+}
+
+
+.aboutus-header ul li a{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight:bold;
+    transition: 0.6s;
+    font-size: 18px;
+
+}
+
+.aboutus-header.sticky{
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    background-color: #fff;
+   
+
+}
+.aboutus-header img{
+    width: 225px;
+    height: 55px ;
+}
+
+
+.aboutus-header.sticky ul li a{
+    color:#000;
+    z-index: 1000;
+}
+
+.brochure{
+    display: inline-block;
+    font-weight: bold;
+    color:#ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 8px;
+    background:#2e6d7f;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+
+
+
+
+/* Basava About us*/
+/* About Us Section */
+.about-us {
+    font-family: 'Arial', sans-serif;
+    margin: 40px auto;
+    max-width: 1400px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Styles */
+
+
+
+.about-us h2,
+.about-us h3 {
+    color: #2e6d7f;;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.about-us h1 {
+    color: #2e6d7f;;
+    font-weight: bold;
+    font-size: 32px;
+    text-align: left;
+}
+
+.about-us h2 {
+    font-size: 28px;
+    margin-top: 30px;
+    color: #2e6d7f;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.about-us h3 {
+    font-size: 24px;
+    margin-top: 20px;
+    
+}
+
+.about-us h4 {
+    text-align: left;
+    color: #777;
+}
+
+/* Paragraph and Text Styles */
+.about-us p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.about-us ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.about-us ul li {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Section Container Styles */
+.about-us .section-container {
+    margin-top: 40px;
+}
+
+/* Image Caption */
+.about-us .caption {
+    font-style: italic;
+    color: #777;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Button Styling */
+.about-us .cta-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 30px;
+}
+
+.about-us .cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-us {
+        padding: 20px;
+    }
+
+    .about-us h1 {
+        font-size: 28px;
+    }
+
+    .about-us h2 {
+        font-size: 24px;
+    }
+
+    .about-us p {
+        font-size: 14px;
+    }
+}
+
+
+/* Section about-us */
+
+
+/* Specific Banner Styling for "Our Projects" */
+.projects-banner {
+    position: relative;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+/* Background Image for Projects Banner */
+.projects-banner {
+    background-image: url('images/banner-project.jpg'); /* Replace with your image */
+}
+
+/* Text Box Styling */
+.projects-banner .text-box {
+    background: rgba(141, 230, 218, 0.3); /* Semi-transparent background */
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.projects-banner .text-box h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #00ffff; /* Highlighted accent color */
+    margin: 0;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .projects-banner {
+        height: 40vh; /* Adjust height for mobile screens */
+    }
+
+    .projects-banner .text-box {
+        padding: 1.5rem 2rem; /* Adjust padding for smaller screens */
+    }
+
+    .projects-banner .text-box h1 {
+        font-size: 2rem; /* Smaller font size for mobile */
+    }
+}
+
+/*Projects page*/
+
+/* Gallery section */
+.gallery {
+    padding: 40px 20px;
+}
+
+/* Responsive gallery grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Gallery item styling */
+.gallery-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+/* Ensuring Image Auto-Crop & Fit */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Crop and fit */
+    border-radius: 12px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.overlay h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.overlay p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+/* COntact us header page */
+/* General Header Styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 15px 50px;
+    z-index: 10000;
+    background-color: transparent;
+}
+
+.header img {
+    width: 200px;
+    height: auto;
+}
+
+.navlinks {
+    display: flex;
+    align-items: center;
+}
+
+#nav-links {
+    display: flex;
+    list-style: none;
+    gap:0px;
+}
+
+#nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+
+.brochure {
+    background-color: #2e6d7f;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.brochure:hover {
+    background-color: #204b59;
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.hamburger {
+    display: none !important;
+}
+
+.close-menu {
+    display: none !important;
+}
+
+
+.close-menu {
+    display: none;
+    font-size: 28px;
+    color: #000;
+    cursor: pointer;
+}
+
+/* Sticky Header */
+
+.header.sticky{
+   padding: 15px 50px;
+    background-color: #fff; 
+}
+
+.header img{
+    width: 225px;
+    height: 55px ;
+}
+
+
+.header.sticky #nav-links li a{
+    color:#000;
+    z-index: 1000;
+}
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 20px;
+    }
+    .header img{
+        width: 190px;
+        height: 50px ;
+    }
+    .navlinks {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100vh;
+        background-color: #fff;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 10px;
+        transition: 0.3s;
+    }
+
+    .navlinks.active {
+        right: 0;
+    }
+
+    #nav-links {
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    #nav-links li a {
+        color: #000;
+    }
+
+    .hamburger {
+        display: block !important;
+    }
+
+    .close-menu {
+        display: block !important;
+        align-self: flex-end;
+    }
+
+    .brochure {
+        width: 100%;
+        text-align: center;
+    }
+
+    .header.sticky{
+        padding: 10px 20px;
+        background-color: #fff; 
+ }
+ 
+}
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.contact-form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+    padding: 20px;
+}
+
+.form-container {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 500px;
+    width: 100%;
+}
+
+h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #555;
+}
+
+input, textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #74ebd5;
+    outline: none;
+    box-shadow: 0 0 5px rgba(116, 235, 213, 0.5);
+}
+
+textarea {
+    resize: none;
+}
+
+.btn-submit {
+    padding: 12px 20px;
+    background-color: #74ebd5;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: #67d8c0;
+    transform: translateY(-2px);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 20px;
+    }
+}
+
+
+
+/* Specific Banner Styling for "Our Services" */
+.services-banner {
+    position: relative;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+/* Background Image for Services Banner */
+.services-banner {
+    background-image: url('images/banner-services.jpg'); /* Replace with your image */
+}
+
+/* Text Box Styling */
+.services-banner .text-box {
+    background: rgba(141, 230, 218, 0.3); /* Semi-transparent background */
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.services-banner .text-box h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #00ffff; /* Highlighted accent color */
+    margin: 0;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .services-banner {
+        height: 40vh; /* Adjust height for mobile screens */
+    }
+
+    .services-banner .text-box {
+        padding: 1.5rem 2rem; /* Adjust padding for smaller screens */
+    }
+
+    .services-banner .text-box h1 {
+        font-size: 2rem; /* Smaller font size for mobile */
+    }
+}
+
+
+/*services*/
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header .header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.service-card h3 {
+    font-size: 1.25rem;
+    margin: 15px 0;
+}
+
+.service-card p {
+    font-size: 0.9rem;
+    color: #666;
+    padding: 0 15px 20px;
+}
+
+
+/* footer*/
+
+/* Channel Partners Section */
+
+.channel-partners {
+    background-color: #429cb5; /* Soft blue background for the full-width band */
+    padding: 0rem 0; /* Vertical padding to give space above and below the text */
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0rem; /* Space below the section */
+}
+
+/* Channel Partners Header */
+.channel-header h1 {
+    font-size: 3rem; /* Font size for the heading */
+    font-weight: 700;
+    color: white; /* White text color */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 0; /* Remove default margin */
+    padding: 0;
+    position: relative;
+}
+
+/* Optional: Adding a hover underline effect */
+.channel-header h1::after {
+    content: '';
+    position: absolute;
+    bottom: 10px; /* Position the underline below the text */
+    left: 0;
+    width: 100%;
+    height: 0px;
+    background-color: #00ffff; /* Cyan underline */
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.channel-header h1:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Marquee effect container */
+.marquee {
+    overflow: hidden;
+    position: relative;
+    background-color: #f9f9f9;
+    padding: 50px;
+    width: 100%;
+    margin-top: 0px;
+}
+
+/* Smooth scrolling effect */
+.marquee-content {
+    display: flex;
+    animation: scroll 30s linear infinite;
+}
+
+.marquee-content img {
+    height: 100px;
+    margin: 0 40px;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+}
+
+.marquee-content img:hover {
+    transform: scale(1.1);
+}
+
+/* Animation for the scrolling effect */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .marquee-content img {
+        height: 60px;
+        margin: 0 20px;
+    }
+
+    .channel-header h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .marquee-content img {
+        height: 50px;
+        margin: 0 15px;
+    }
+
+    .channel-header h1 {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+/* My Home Slider css */
+
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Project Section Styling */
+.project {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Grid layout with responsive columns */
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+/* Styling for each project card */
+.project-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image styling inside the project card */
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and fill the container */
+    display: block;
+}
+
+/* Hover effect for the project card */
+.project-card:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* "See More" Button Styling - Using aboutknow styles */
+.aboutknow {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border: 2px solid var(--secondary-color);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--footer-bg-color);
+    background: var(--cta-bg-gradient);
+    transition: all 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.aboutknow:hover {
+    background: var(--cta-hover-gradient);
+    border-color: var(--primary-color);
+    color: var(--footer-bg-color);
+    transform: translateY(-3px) scale(1.05); /* Adds depth on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project {
+        grid-template-columns: 1fr 1fr; /* Two columns on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .project {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+}
+
+
+
+
+
